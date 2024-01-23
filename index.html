@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="current-project.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+<body>
+  <form class="container">
+    <div class="container-item inputs">
+      <div class="input-container">
+        <div class="labels">
+          <label class="label label-margin">Bill</label>
+        </div>
+        <label class="cash">$</label>
+        <input id="bill" class="input input-cash" type="text" placeholder="0">
+      </div>
+      <div class="tips">
+        <label class="label">Select Tip %</label>
+        <div class="tip-types">
+          <input type="button" class="tip-type" id="5-percent" value="5%">
+          <input type="button" class="tip-type" id="10-percent" value="10%">
+          <input type="button" class="tip-type" id="15-percent" value="15%">
+          <input type="button" class="tip-type" id="25-percent" value="25%">
+          <input type="button" class="tip-type" id="50-percent" value="50%">
+          <input type="text" class="tip-type" id="custom-percent" placeholder="Custom">
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="labels">
+          <label class="label">Number of people</label>
+          <label id="people-error" class="error"></label>
+        </div>
+        <div>
+          <label class="user">유</label>
+          <input type="text" id="" class="input" placeholder="0">
+        </div>
+      </div>
+    </div>
+    <div class="container-item summary">
+      <div class="summaries">
+        <div class="summary-element summary-margin">
+          <p class="summary-title">
+            Tip amount<br>
+            <span class="summary-per">/ person</span>
+          </p>
+          <h1 class="summary-figure">$0.00</h1>
+        </div>
+        <div class="summary-element">
+          <p class="summary-title">
+            Total<br>
+            <span class="summary-per">/ person</span>
+          </p>
+          <h1 class="summary-figure">$0.00</h1>
+        </div>
+      </div>
+      <input type="button" value="RESET" id="reset">
+    </div>
+  </form>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
