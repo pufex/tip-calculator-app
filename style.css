@@ -18,6 +18,7 @@ body{
 
 input, button{
     font-weight: 700;
+    font-size: 2rem;
 }
 
 :root{
@@ -41,7 +42,7 @@ input, button{
     border-radius: 15px;
     box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 0.5);
     width: 1000px;
-    height: 500px;
+    min-height: 500px;
 }
 
 .container-item{
@@ -55,6 +56,7 @@ input, button{
     display: block;
     position: relative;
     width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .labels{
@@ -99,6 +101,10 @@ input, button{
     z-index: 999;
 }
 
+.tips{
+    margin-bottom: 1.5rem;
+}
+
 .tip-types{
     display: grid;
     gap: 1em;
@@ -114,7 +120,7 @@ input, button{
     background-color: var(--Very-dark-cyan);
     color: var(--White);
     border-radius: 7px;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     outline: none;
     border: none;
     cursor: pointer;
@@ -181,14 +187,47 @@ input, button{
     font-size: 3rem;
 }
 
+.margin-bottom{
+    margin-bottom: 1rem;
+}
+
 #reset{
     display: block;
     text-align: center;
     height: 3.5rem;
     padding: 0.75rem;
     width: 100%;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
     border-radius: 7px;
+}
+
+@media (max-width: 1000px){
+    body{
+        
+    }
+    
+    .container{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: 0;
+    }
+
+    label, input, input::placeholder, button, button::placeholder{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .container{
+        min-height: 100vh;
+    }
+
+    .summary-figure{
+        font-size: 2rem;
+    }
 }
