@@ -9,6 +9,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -16,13 +17,18 @@ body{
     background-color: var(--Light-grayish-cyan);
 }
 
+.logo{
+    margin: 1rem;
+}
+
 input, button{
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 :root{
     --Strong-cyan: hsl(172, 67%, 45%);
+    --Strong-lighter-cyan: hsl(172, 81%, 55%);
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Lighter-very-dark-cyan: hsl(183, 100%, 20%);
     --Dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -41,7 +47,8 @@ input, button{
     border: none;
     border-radius: 15px;
     box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 0.5);
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     min-height: 500px;
 }
 
@@ -144,8 +151,9 @@ input, button{
 }
 
 #custom-percent:focus{
-    border: 1px solid green;
+    border: 5px solid var(--Strong-cyan);
 }
+
 
 #custom-percent::placeholder{
     color: var(--Dark-grayish-cyan);
@@ -203,17 +211,31 @@ input, button{
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
     border-radius: 7px;
+    outline: none;
+    border: none;
+}
+
+#reset:hover{
+    background-color: var(--Strong-lighter-cyan);
 }
 
 @media (max-width: 1000px){
     body{
-        
+        justify-content: start;
+        padding: 0 100px;
+        padding-bottom: 100px;
     }
     
+    .logo{
+        margin: 2rem
+    }
+
     .container{
         grid-template-columns: 1fr;
         padding: 1rem;
         border-radius: 0;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
         box-shadow: 0;
     }
 
@@ -224,6 +246,10 @@ input, button{
 }
 
 @media (max-width: 600px){
+
+    body{
+        padding: 0;
+    }
 
     .container{
         min-height: 100vh;

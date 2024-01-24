@@ -12,6 +12,9 @@
 
 </head>
 <body>
+  <div>
+    <img class="logo" src="images/logo.svg" alt="">
+  </div>
   <form class="container">
     <div class="container-item inputs">
       <div class="input-container">
@@ -42,7 +45,7 @@
         </div>
         <div>
           <label class="user">유</label>
-          <input type="text" id="" class="input" placeholder="0">
+          <input type="text" id="people" class="input" placeholder="0">
         </div>
       </div>
     </div>
@@ -53,14 +56,14 @@
             Tip amount<br>
             <span class="summary-per">/ person</span>
           </p>
-          <h1 class="summary-figure">$0.00</h1>
+          <h1 id="tip-amount"class="summary-figure">$0.00</h1>
         </div>
         <div class="summary-element">
           <p class="summary-title">
             Total<br>
             <span class="summary-per">/ person</span>
           </p>
-          <h1 class="summary-figure">$0.00</h1>
+          <h1 id="total" class="summary-figure">$0.00</h1>
         </div>
       </div>
       <input type="button" value="RESET" id="reset">
